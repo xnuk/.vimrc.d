@@ -64,6 +64,3 @@ nnoremap <silent> <Leader><Leader> :noh<CR>
 nnoremap <silent> b :CtrlPBuffer<CR>
 nnoremap <silent> <Leader>; :CtrlPCmdPalette<CR>
 
-" Nerd Tree
-nnoremap <silent> <C-\> :NERDTree<CR>
-
