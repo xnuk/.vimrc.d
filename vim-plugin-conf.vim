@@ -40,3 +40,14 @@ let g:mustache_operators = 0
 let g:user_emmet_mode='i' " use only insert mode
 let g:user_emmet_install_global = 0
 autocmd FileType html EmmetInstall " enable just for html
+
+" Startify
+au User Startified
+	\ execute 'silent! nunmap <buffer> n' |
+	\ execute 'silent! nunmap <buffer> i' |
+	\ execute 'silent! nunmap <buffer> e' |
+	\ execute 'silent! nunmap <buffer> u'
+
+let g:startify_custom_indices = ['a', 'r', 's', 't']
+let g:startify_session_sort = 1
+let g:startify_change_to_vcs_root = 1
