@@ -9,6 +9,8 @@ nnoremap n h|vnoremap n h
 nnoremap u k|vnoremap u k
 nnoremap e j|vnoremap e j
 nnoremap i l|vnoremap i l
+silent! vunmap ii
+silent! vunmap iI
 
 " word surffing
 nnoremap N b|vnoremap N b
@@ -42,10 +44,8 @@ vnoremap <S-Tab> <gv
 nnoremap <CR> i<CR>
 
 " swap ; :
-nnoremap ; :
-nnoremap ; :
-nnoremap : ;
-vnoremap : ;
+nnoremap ; :|vnoremap ; :
+nnoremap : ;|vnoremap : ;
 
 " new tab
 nnoremap <C-t> :tabfind<Space>

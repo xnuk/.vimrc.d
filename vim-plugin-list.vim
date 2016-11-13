@@ -71,4 +71,7 @@ Plug 'scrooloose/nerdtree'
 
 " .swp diff
 Plug 'chrisbra/Recover.vim'
+
+" start screen
+Plug 'mhinz/vim-startify'
 call plug#end()

@@ -40,3 +40,8 @@ set listchars=tab:\|\ ,trail:·,extends:>,precedes:<,nbsp:+
 " open new split panes to right and bottom
 set splitbelow
 set splitright
+
+" use sh shell for command execute
+if &shell =~# 'fish$'
+	set shell=sh
+endif
