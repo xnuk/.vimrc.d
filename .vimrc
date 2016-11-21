@@ -4,6 +4,7 @@ source ~/.vimrc.d/vim-plugin-list.vim
 source ~/.vimrc.d/vim-shortcuts.vim
 
 au BufNewFile,BufRead *.jison set filetype=javascript
+au BufNewFile,BufRead .babelrc set filetype=json
 
 syntax on
 colo Tomorrow-Night

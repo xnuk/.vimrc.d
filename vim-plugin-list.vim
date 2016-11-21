@@ -64,7 +64,7 @@ Plug 'Valloric/YouCompleteMe'
 Plug 'tpope/vim-fugitive' " :G*
 
 " This DOES key binds. `<c-y>,` only.
-Plug 'mattn/emmet-vim', {'for': 'html'}
+Plug 'mattn/emmet-vim'
 
 " .swp diff
 Plug 'chrisbra/Recover.vim'

@@ -34,6 +34,9 @@ inoremap <C-v> <C-[>pa
 inoremap <C-z> <C-[>ui
 nnoremap zz u
 
+" sudo save
+cmap w!! w !sudo tee > /dev/null %
+
 " indent
 nnoremap <Tab> >>
 nnoremap <S-Tab> <<
