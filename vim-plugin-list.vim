@@ -8,7 +8,6 @@ Plug 'vim-airline/vim-airline-themes'
 
 " text object
 Plug 'kana/vim-textobj-user' " custom text object
-Plug 'michaeljsmith/vim-indent-object' " indent text object
 
 Plug 'Shougo/vimproc.vim', {'do': 'make'} " interactive command execution
 
