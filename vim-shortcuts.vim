@@ -5,16 +5,16 @@ set pastetoggle=<F2>
 let g:mapleader=' '
 
 " the arrow key magic
-nnoremap n h|vnoremap n h
+nnoremap N h|vnoremap N b
+nnoremap I l|vnoremap I w
 nnoremap u k|vnoremap u k
 nnoremap e j|vnoremap e j
-nnoremap i l|vnoremap i l
-silent! vunmap ii
-silent! vunmap iI
 
 " word surffing
-nnoremap N b|vnoremap N b
-nnoremap I w|vnoremap I w
+nnoremap n b|vnoremap n b
+nnoremap i w|vnoremap i w
+
+nnoremap w viw
 
 " paragragh surffing
 nnoremap U {|vnoremap U {
