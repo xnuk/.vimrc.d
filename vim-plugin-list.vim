@@ -55,8 +55,8 @@ Plug 'eagletmt/neco-ghc', {'for': 'haskell'}
 Plug 'Twinside/vim-hoogle', {'for': 'haskell'} " :Hoogle*
 
 " Python
-Plug 'klen/python-mode', {'for': 'python'}
-Plug 'davidhalter/jedi-vim', {'for': 'python'}
+" Plug 'klen/python-mode', {'for': 'python'}
+" Plug 'davidhalter/jedi-vim', {'for': 'python'}
 
 Plug 'ervandew/supertab' " tab complete
 
