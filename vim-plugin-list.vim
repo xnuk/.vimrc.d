@@ -50,7 +50,6 @@ Plug 'AndrewRadev/linediff.vim' " Select lines, and execute :Linediff
 
 " Haskell
 Plug 'eagletmt/ghcmod-vim', {'for': 'haskell'}
-Plug 'bitc/vim-hdevtools', {'for': 'haskell'} " :Hdev*
 Plug 'eagletmt/neco-ghc', {'for': 'haskell'}
 Plug 'Twinside/vim-hoogle', {'for': 'haskell'} " :Hoogle*
 
