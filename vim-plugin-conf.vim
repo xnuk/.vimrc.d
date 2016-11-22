@@ -36,6 +36,9 @@ let g:airline_symbols.linenr = ''
 " vim-mustache-handlebars
 let g:mustache_operators = 0
 
+" supertab
+let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
+
 " Emmet
 let g:user_emmet_mode='i' " use only insert mode
 let g:user_emmet_install_global = 0
@@ -51,3 +54,6 @@ au User Startified
 let g:startify_custom_indices = ['a', 'r', 's', 't']
 let g:startify_session_sort = 1
 let g:startify_change_to_vcs_root = 1
+
+" vim-gitgutter
+let g:gitgutter_map_keys = 0

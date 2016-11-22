@@ -58,7 +58,7 @@ Plug 'Twinside/vim-hoogle', {'for': 'haskell'} " :Hoogle*
 Plug 'klen/python-mode', {'for': 'python'}
 Plug 'davidhalter/jedi-vim', {'for': 'python'}
 
-Plug 'Valloric/YouCompleteMe'
+Plug 'ervandew/supertab' " tab complete
 
 Plug 'tpope/vim-fugitive' " :G*
 
@@ -70,4 +70,8 @@ Plug 'chrisbra/Recover.vim'
 
 " start screen
 Plug 'mhinz/vim-startify'
+
+" shows a git diff in number column
+Plug 'airblade/vim-gitgutter'
+
 call plug#end()
