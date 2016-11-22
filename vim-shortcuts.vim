@@ -70,3 +70,15 @@ nnoremap <silent> <Leader>; :CtrlPCmdPalette<CR>
 " vim-easy-align
 vmap <Leader>e <Plug>(EasyAlign)
 nmap <Leader>e <Plug>(EasyAlign)
+
+" pane jump
+nnoremap zn <C-w>h
+nnoremap zi <C-w>l
+nnoremap zu <C-w>k
+nnoremap ze <C-w>j
+
+" pane resize
+nnoremap <silent> - :vertical resize -5<CR>
+nnoremap <silent> = :vertical resize +5<CR>
+nnoremap <silent> _ :resize -5<CR>
+nnoremap <silent> + :resize +5<CR>
