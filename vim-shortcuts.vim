@@ -67,3 +67,6 @@ nnoremap <silent> <Leader><Leader> :noh<CR>
 nnoremap <silent> b :CtrlPBuffer<CR>
 nnoremap <silent> <Leader>; :CtrlPCmdPalette<CR>
 
+" vim-easy-align
+vmap <Leader>e <Plug>(EasyAlign)
+nmap <Leader>e <Plug>(EasyAlign)

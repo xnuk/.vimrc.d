@@ -9,6 +9,9 @@ Plug 'vim-airline/vim-airline-themes'
 " text object
 Plug 'kana/vim-textobj-user' " custom text object
 
+" align text vertically
+Plug 'junegunn/vim-easy-align'
+
 Plug 'Shougo/vimproc.vim', {'do': 'make'} " interactive command execution
 
 " language syntax
