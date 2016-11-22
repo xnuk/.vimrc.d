@@ -14,6 +14,13 @@ nnoremap e j|vnoremap e j
 nnoremap n b|vnoremap n b
 nnoremap i w|vnoremap i w
 
+" home, end, half page up, half page down
+nnoremap tn ^|vnoremap tn ^
+nnoremap ti $|vnoremap ti $
+nnoremap tu <C-u>|vnoremap tu <C-u>
+nnoremap te <C-d>|vnoremap te <C-d>
+
+" select current word
 nnoremap w viw
 
 " paragragh surffing
@@ -33,6 +40,12 @@ inoremap <C-v> <C-[>pa
 " undo
 inoremap <C-z> <C-[>ui
 nnoremap zz u
+nnoremap tt u
+" redo
+nnoremap ty <C-r>
+
+" jump to last modified
+nnoremap tj U
 
 " sudo save
 cmap w!! w !sudo tee > /dev/null %
