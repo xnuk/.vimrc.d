@@ -5,8 +5,8 @@ set pastetoggle=<F2>
 let g:mapleader=' '
 
 " the arrow key magic
-nnoremap N h|vnoremap N b
-nnoremap I l|vnoremap I w
+nnoremap N h|vnoremap N h
+nnoremap I l|vnoremap I l
 nnoremap u k|vnoremap u k
 nnoremap e j|vnoremap e j
 
