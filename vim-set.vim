@@ -45,3 +45,8 @@ set splitright
 if &shell =~# 'fish$'
 	set shell=sh
 endif
+
+" mouse mode in tmux
+if !empty($TMUX)
+	set ttymouse=xterm2
+endif
