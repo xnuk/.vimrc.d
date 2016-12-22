@@ -12,6 +12,9 @@ Plug 'kana/vim-textobj-user' " custom text object
 " align text vertically
 Plug 'junegunn/vim-easy-align'
 
+" multiple cursors, like Sublime Text.
+Plug 'terryma/vim-multiple-cursors'
+
 Plug 'Shougo/vimproc.vim', {'do': 'make'} " interactive command execution
 
 " language syntax
@@ -46,7 +49,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'fisadev/vim-ctrlp-cmdpalette' " command auto-complete
 
 " FZF
-Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --all'}
+Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': 'yes \| ./install --all'}
 Plug 'junegunn/fzf.vim'
 
 Plug 'AndrewRadev/linediff.vim' " Select lines, and execute :Linediff
@@ -60,6 +63,7 @@ Plug 'Twinside/vim-hoogle', {'for': 'haskell'} " :Hoogle*
 " Plug 'klen/python-mode', {'for': 'python'}
 " Plug 'davidhalter/jedi-vim', {'for': 'python'}
 
+Plug 'Valloric/YouCompleteMe'
 Plug 'ervandew/supertab' " tab complete
 
 Plug 'tpope/vim-fugitive' " :G*
@@ -75,5 +79,11 @@ Plug 'mhinz/vim-startify'
 
 " shows a git diff in number column
 Plug 'airblade/vim-gitgutter'
+
+" Elm
+Plug 'ElmCast/elm-vim', {'for': 'elm'}
+
+" vim as file manager
+Plug 'mbbill/VimExplorer'
 
 call plug#end()

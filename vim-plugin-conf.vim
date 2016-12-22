@@ -1,6 +1,6 @@
 " YouCompleteMe
 let g:ycm_semantic_triggers = {
-	\ 'haskell': ['.', ' '],
+	\ 'haskell,elm': ['.', ' '],
 	\ 'javascript,python' : ['.'],
 	\ 'vim'  : ['re![_a-zA-Z]+[_\w]*\.'],
 	\ 'c'    : ['->', '.'],
@@ -40,7 +40,7 @@ let g:mustache_operators = 0
 let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
 
 " Emmet
-let g:user_emmet_mode='i' " use only insert mode
+let g:user_emmet_mode='ni' " use only normal and insert mode
 let g:user_emmet_install_global = 0
 autocmd FileType html EmmetInstall " enable just for html
 
@@ -57,3 +57,19 @@ let g:startify_change_to_vcs_root = 1
 
 " vim-gitgutter
 let g:gitgutter_map_keys = 0
+
+" elm-vim
+let g:elm_setup_keybindings = 0
+
+" VimExplorer
+let g:VEConf_usingVim = 1
+let g:VEConf_vimOpenCommand = "tabfind"
+let g:VEConf_singleFileActions = {}
+let g:VEConf_singleFileHotKeys = {}
+
+" vim-multiple-cursors
+let g:multi_cursor_use_default_mapping=0
+let g:multi_cursor_next_key='<C-d>'
+let g:multi_cursor_prev_key='<C-p>'
+let g:multi_cursor_skip_key='<C-k>'
+let g:multi_cursor_quit_key='<Esc>'
