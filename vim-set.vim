@@ -32,6 +32,7 @@ set shiftwidth=4 " indent size
 set noexpandtab " I LOVE HARD TAB
 set autoindent " copy indent from current line
 set smartindent
+set colorcolumn=120,121,122,123 " 120 chars and bold line
 
 " show invisible chars
 set list

@@ -1,6 +1,12 @@
 " Paste mode
 set pastetoggle=<F2>
 
+" fold toggle
+inoremap <F9> <C-O>za
+nnoremap <F9> za
+onoremap <F9> <C-C>za
+vnoremap <F9> zf
+
 " leader: <Space>
 let g:mapleader=' '
 
@@ -19,6 +25,9 @@ nnoremap tn ^|vnoremap tn ^
 nnoremap ti $|vnoremap ti $
 nnoremap tu <C-u>|vnoremap tu <C-u>
 nnoremap te <C-d>|vnoremap te <C-d>
+
+" save
+nnoremap tw :w<CR>
 
 " select current word
 nnoremap w viw
@@ -64,7 +73,8 @@ nnoremap ; :|vnoremap ; :
 nnoremap : ;|vnoremap : ;
 
 " new tab
-nnoremap <C-t> :tabfind<Space>
+" nnoremap <C-t> :tabfind<Space>
+nnoremap <C-t> :FZF<CR>
 
 " tab switching
 nnoremap j gT
@@ -95,3 +105,86 @@ nnoremap <silent> - :vertical resize -5<CR>
 nnoremap <silent> = :vertical resize +5<CR>
 nnoremap <silent> _ :resize -5<CR>
 nnoremap <silent> + :resize +5<CR>
+
+" emmet
+inoremap <silent> <C-l> <Esc>:call emmet#expandAbbr(3,"")<CR>
+
+vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
+
+" swap number keys
+
+" map each number to its shift-key character
+inoremap 1 !
+inoremap 2 @
+inoremap 3 #
+inoremap 4 $
+inoremap 5 %
+inoremap 6 ^
+inoremap 7 &
+inoremap 8 *
+inoremap 9 (
+inoremap 0 )
+inoremap - _
+" and then the opposite
+inoremap ! 1
+inoremap @ 2
+inoremap # 3
+inoremap $ 4
+inoremap % 5
+inoremap ^ 6
+inoremap & 7
+inoremap * 8
+inoremap ( 9
+inoremap ) 0
+inoremap _ -
+
+" map each number to its shift-key character
+nnoremap 1 !
+nnoremap 2 @
+nnoremap 3 #
+nnoremap 4 $
+nnoremap 5 %
+nnoremap 6 ^
+nnoremap 7 &
+nnoremap 8 *
+nnoremap 9 (
+nnoremap 0 )
+nnoremap - _
+" and then the opposite
+nnoremap ! 1
+nnoremap @ 2
+nnoremap # 3
+nnoremap $ 4
+nnoremap % 5
+nnoremap ^ 6
+nnoremap & 7
+nnoremap * 8
+nnoremap ( 9
+nnoremap ) 0
+nnoremap _ -
+
+" map each number to its shift-key character
+vnoremap 1 !
+vnoremap 2 @
+vnoremap 3 #
+vnoremap 4 $
+vnoremap 5 %
+vnoremap 6 ^
+vnoremap 7 &
+vnoremap 8 *
+vnoremap 9 (
+vnoremap 0 )
+vnoremap - _
+" and then the opposite
+vnoremap ! 1
+vnoremap @ 2
+vnoremap # 3
+vnoremap $ 4
+vnoremap % 5
+vnoremap ^ 6
+vnoremap & 7
+vnoremap * 8
+vnoremap ( 9
+vnoremap ) 0
+vnoremap _ -
+

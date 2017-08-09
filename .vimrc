@@ -34,3 +34,8 @@ function! s:DiffWithSaved()
 endfunction
 com! DiffSaved call s:DiffWithSaved()
 com! DiffBuffer call s:DiffWithSaved()
+
+" au BufWritePost *.hs  silent !fast-tags %
+" au BufWritePost *.hsc silent !fast-tags %
+" nnoremap <silent> <c-]> :setl iskeyword=@,_,.,48-57,39<cr><c-]>
+"   \:setl iskeyword=@,48-57,_,192-255<cr>

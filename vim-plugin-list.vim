@@ -24,7 +24,7 @@ Plug 'wavded/vim-stylus', {'for': 'stylus'}
 Plug 'haskell.vim', {'for': 'haskell'}
 Plug 'rust-lang/rust.vim', {'for': 'rust'}
 Plug 'dag/vim-fish', {'for': 'fish'}
-
+Plug 'leafgarland/typescript-vim', {'for': 'typescript'}
 " This DOES key binds, for mustache.
 " [[ jumps to the first previous tag
 " ]] jumps to the first following tag
@@ -51,6 +51,10 @@ Plug 'fisadev/vim-ctrlp-cmdpalette' " command auto-complete
 " FZF
 Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': 'yes \| ./install --all'}
 Plug 'junegunn/fzf.vim'
+
+" incsearch
+" this MAY binds key
+Plug 'haya14busa/incsearch.vim'
 
 Plug 'AndrewRadev/linediff.vim' " Select lines, and execute :Linediff
 
@@ -85,5 +89,21 @@ Plug 'ElmCast/elm-vim', {'for': 'elm'}
 
 " vim as file manager
 Plug 'mbbill/VimExplorer'
+
+" trying
+Plug 'Twinside/vim-haskellFold', {'for': 'haskell'}
+Plug 'dan-t/vim-hsimport', {'for': 'haskell'}
+
+Plug 'bitc/vim-hdevtools', {'for': 'haskell'}
+"Plug 'vim-syntastic/syntastic'
+
+" TypeScript
+Plug 'Quramy/tsuquyomi'
+
+" LICENSE templates
+Plug 'antoyo/vim-licenses'
+
+" GAME
+Plug 'johngrib/vim-game-code-break'
 
 call plug#end()

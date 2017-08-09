@@ -1,6 +1,6 @@
 " YouCompleteMe
 let g:ycm_semantic_triggers = {
-	\ 'haskell,elm': ['.', ' '],
+	\ 'haskell': ['.', ' '],
 	\ 'javascript,python' : ['.'],
 	\ 'vim'  : ['re![_a-zA-Z]+[_\w]*\.'],
 	\ 'c'    : ['->', '.'],
@@ -42,7 +42,9 @@ let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
 " Emmet
 let g:user_emmet_mode='ni' " use only normal and insert mode
 let g:user_emmet_install_global = 0
-autocmd FileType html EmmetInstall " enable just for html
+autocmd FileType html EmmetInstall
+autocmd FileType pug EmmetInstall
+autocmd FileType php EmmetInstall
 
 " Startify
 au User Startified
@@ -73,3 +75,11 @@ let g:multi_cursor_next_key='<C-d>'
 let g:multi_cursor_prev_key='<C-p>'
 let g:multi_cursor_skip_key='<C-k>'
 let g:multi_cursor_quit_key='<Esc>'
+
+"ctrlp
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+
+" incsearch
+map /  <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
