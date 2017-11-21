@@ -1,6 +1,6 @@
 set nocompatible " no vi-compatible
 
-set mouse=a " mouse mode
+set mouse=vin " mouse mode
 set winaltkeys=no " allow mapping of alt key
 
 set t_Co=256
@@ -25,14 +25,17 @@ set wildmenu
 set wildmode=list:longest,full
 
 set number " show line number
-set nofoldenable " don't fold
+
+set foldenable " enable fold
+set foldlevelstart=20 " but open all folds by default
+set foldmethod=marker
 
 set tabstop=4 " tab size
 set shiftwidth=4 " indent size
 set noexpandtab " I LOVE HARD TAB
 set autoindent " copy indent from current line
 set smartindent
-set colorcolumn=120,121,122,123 " 120 chars and bold line
+set colorcolumn=80,81,82,83,120,121,122,123 " 120 chars and 80 chars both
 
 " show invisible chars
 set list

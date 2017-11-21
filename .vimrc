@@ -39,3 +39,23 @@ com! DiffBuffer call s:DiffWithSaved()
 " au BufWritePost *.hsc silent !fast-tags %
 " nnoremap <silent> <c-]> :setl iskeyword=@,_,.,48-57,39<cr><c-]>
 "   \:setl iskeyword=@,48-57,_,192-255<cr>
+
+function! ToggleVerbose()
+    if !&verbose
+        set verbosefile=~/test.log
+        set verbose=15
+    else
+        set verbose=0
+        set verbosefile=
+    endif
+endfunction
+
+function! IMEStatusString ()
+	if exists('*ime#mode')
+		return ime#mode()
+	endif
+	return ''
+endfunction
+
+call airline#parts#define_function('IMEStatus', 'IMEStatusString')
+let g:airline_section_x = airline#section#create(['IMEStatus'])

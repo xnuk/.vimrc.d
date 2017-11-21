@@ -20,4 +20,4 @@ function! FormatHaskell()
 endfunction
 
 autocmd FileType haskell setlocal formatexpr=FormatHaskell()
-autocmd BufWritePost <buffer> execute ":GhcModCheckAndLintAsync"
+"autocmd BufWritePost <buffer> execute ":GhcModCheckAndLintAsync"

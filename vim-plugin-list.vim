@@ -21,10 +21,13 @@ Plug 'Shougo/vimproc.vim', {'do': 'make'} " interactive command execution
 Plug 'jelera/vim-javascript-syntax', {'for': 'javascript'}
 Plug 'digitaltoad/vim-pug', {'for': 'pug'}
 Plug 'wavded/vim-stylus', {'for': 'stylus'}
-Plug 'haskell.vim', {'for': 'haskell'}
+Plug 'vim-scripts/haskell.vim', {'for': 'haskell'}
 Plug 'rust-lang/rust.vim', {'for': 'rust'}
+Plug 'racer-rust/vim-racer', {'for': 'rust'}
 Plug 'dag/vim-fish', {'for': 'fish'}
 Plug 'leafgarland/typescript-vim', {'for': 'typescript'}
+Plug 'Kuniwak/vint', {'for': 'vim'}
+Plug 'gutenye/json5.vim', {'for': 'json5'}
 " This DOES key binds, for mustache.
 " [[ jumps to the first previous tag
 " ]] jumps to the first following tag
@@ -42,7 +45,7 @@ Plug 'mustache/vim-mustache-handlebars'
 Plug 'plasticboy/vim-markdown', {'for': 'markdown'}
 
 " EditorConfig
-Plug 'editorconfig/editorconfig-vim'
+Plug 'sgur/vim-editorconfig'
 
 " CtrlP
 Plug 'ctrlpvim/ctrlp.vim'
@@ -54,7 +57,10 @@ Plug 'junegunn/fzf.vim'
 
 " incsearch
 " this MAY binds key
-Plug 'haya14busa/incsearch.vim'
+Plug 'haya14busa/is.vim'
+
+" see current find status
+Plug 'osyo-manga/vim-anzu'
 
 Plug 'AndrewRadev/linediff.vim' " Select lines, and execute :Linediff
 
@@ -103,7 +109,32 @@ Plug 'Quramy/tsuquyomi'
 " LICENSE templates
 Plug 'antoyo/vim-licenses'
 
-" GAME
-Plug 'johngrib/vim-game-code-break'
+" ale linter
+Plug 'w0rp/ale'
 
+" JSON
+Plug 'elzr/vim-json', {'for': 'json'}
+
+" Latex
+Plug 'lervag/vimtex', {'for': ['bib', 'tex']}
+Plug 'xuhdev/vim-latex-live-preview', {'for': ['bib', 'tex']}
+
+Plug 'SirVer/ultisnips'
+
+Plug 'honza/vim-snippets'
+
+" wat
+Plug 'pi314/ime.vim'
+Plug 'pi314/ime-emoji.vim'
+Plug '~/hangul-ime'
+
+" transpose
+Plug 'salsifis/vim-transpose'
+
+Plug 'enricobacis/vim-airline-clock'
+
+Plug 'neovimhaskell/haskell-vim'
+
+" this bind keys VERY FUCKIN HEAVY.
+"Plug 'tpope/vim-surround'
 call plug#end()
