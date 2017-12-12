@@ -45,7 +45,7 @@ Plug 'mustache/vim-mustache-handlebars'
 Plug 'plasticboy/vim-markdown', {'for': 'markdown'}
 
 " EditorConfig
-Plug 'sgur/vim-editorconfig'
+Plug 'editorconfig/editorconfig-vim'
 
 " CtrlP
 Plug 'ctrlpvim/ctrlp.vim'
@@ -75,8 +75,6 @@ Plug 'Twinside/vim-hoogle', {'for': 'haskell'} " :Hoogle*
 
 Plug 'Valloric/YouCompleteMe'
 Plug 'ervandew/supertab' " tab complete
-
-Plug 'tpope/vim-fugitive' " :G*
 
 " This DOES key binds. `<c-y>,` only.
 Plug 'mattn/emmet-vim'
@@ -135,6 +133,22 @@ Plug 'enricobacis/vim-airline-clock'
 
 Plug 'neovimhaskell/haskell-vim'
 
-" this bind keys VERY FUCKIN HEAVY.
-"Plug 'tpope/vim-surround'
+" Word jump
+" This actually binds key, and terribly overrides key. Please see manual.
+" This changes behavior of w, b, e, ge, aw, iw, <C-R><C-W>
+Plug 'chaoren/vim-wordmotion'
+
+" Repeatedly pressing `v` extends visual block
+" This binds key.
+Plug 'gorkunov/smartpairs.vim'
+
 call plug#end()
+
+" %
+packadd! matchit
+
+" Try to get foreground Vim
+packadd! editexisting
+
+" gdb debug with :Termdebug
+packadd! termdebug

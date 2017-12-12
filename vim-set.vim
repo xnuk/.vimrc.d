@@ -54,3 +54,6 @@ endif
 if !empty($TMUX)
 	set ttymouse=xterm2
 endif
+
+" view cursor column
+set cursorcolumn

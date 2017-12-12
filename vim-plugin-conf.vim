@@ -19,7 +19,7 @@ let g:ale_linters = {
 	\ }
 
 let g:ale_fixers = {
-	\ 'haskell': ['hfmt', 'remove_trailing_lines', "trim_whitespace"],
+	\ 'haskell': ['hfmt', 'remove_trailing_lines', 'trim_whitespace'],
 	\ }
 
 " Racer
@@ -147,6 +147,7 @@ endif
 let g:vimtex_complete_close_braces = 1
 let g:airline#extensions#vimtex#enabled = 1
 let g:vimtex_imaps_leader = '`'
+let g:vimtex_mappings_enabled = 0
 
 " utilsnip
 let g:UltiSnipsExpandTrigger='<c-k>'
@@ -159,3 +160,19 @@ let g:ime_plugins = ['hangul', 'emoji', 'builtin-kana']
 let g:ime_toggle_english = '<C-e>'
 let g:ime_cancel_input = '<C-i>'
 let g:ime_select_mode = '<C-h>'
+
+" tpope sucks
+let g:endwise_no_mappings = 1
+
+" wordmotion
+let g:wordmotion_mappings = {
+\ 'w' : '',
+\ 'b' : 'n',
+\ 'e' : 'i',
+\ 'ge' : '',
+\ 'aw' : '',
+\ 'iw' : 'tw',
+\ '<C-R><C-W>' : '' }
+
+" smartpairs
+let g:smartpairs_revert_key = '<BS>'

@@ -18,7 +18,7 @@ nnoremap e j|vnoremap e j
 
 " word surffing
 nnoremap n b|vnoremap n b
-nnoremap i w|vnoremap i w
+nnoremap i e|vnoremap i e
 
 " home, end, half page up, half page down
 nnoremap tn ^|vnoremap tn ^
@@ -27,7 +27,13 @@ nnoremap tu <C-u>|vnoremap tu <C-u>
 nnoremap te <C-d>|vnoremap te <C-d>
 
 " select current word
-nnoremap w viw
+if has_key(g:plugs, 'vim-wordmotion')
+	nmap w vtw
+	nnoremap W viw
+	nnoremap tw viw
+else
+	nnoremap w viw
+endif
 
 " paragragh surffing
 nnoremap U {|vnoremap U {
@@ -59,6 +65,8 @@ nnoremap <silent> tj 999g,g;
 cmap w!! w !sudo tee > /dev/null %
 
 " indent
+nnoremap <Tab> >>
+nnoremap <S-Tab> <<
 vnoremap <Tab> >gv
 vnoremap <S-Tab> <gv
 
@@ -130,11 +138,16 @@ vnoremap } "ry:let @r=MakeSurround('{', '}', @r)<CR>gv"rpgv
 vnoremap " "ry:let @r=MakeSurround('"', '"', @r)<CR>gv"rpgv
 vnoremap ' "ry:let @r=MakeSurround("'", "'", @r)<CR>gv"rpgv
 
+" find and replace next words
+nnoremap <silent> <Leader><Tab> /\<<C-r>"\><CR>.
+
 " search
-nnoremap <Tab> *
-nnoremap <S-Tab> #
 nnoremap } n
 nnoremap { N
+
+" replaces V
+nnoremap tv V
+vnoremap tv V
 
 " " swap number keys
 " 
