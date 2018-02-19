@@ -20,6 +20,7 @@ let g:ale_linters = {
 
 let g:ale_fixers = {
 	\ 'haskell': ['hfmt', 'remove_trailing_lines', 'trim_whitespace'],
+	\ 'ruby': ['rubocop', 'remove_trailing_lines', 'trim_whitespace']
 	\ }
 
 " Racer
@@ -166,9 +167,9 @@ let g:endwise_no_mappings = 1
 
 " wordmotion
 let g:wordmotion_mappings = {
-\ 'w' : '',
+\ 'w' : 'i',
 \ 'b' : 'n',
-\ 'e' : 'i',
+\ 'e' : '',
 \ 'ge' : '',
 \ 'aw' : '',
 \ 'iw' : 'tw',

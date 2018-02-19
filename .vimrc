@@ -9,11 +9,13 @@ au BufNewFile,BufRead .babelrc set filetype=json
 syntax on
 colo Tomorrow-Night
 
-au InsertEnter * set cursorline
-au InsertLeave * set nocursorline
+augroup InsertTheme
+	au InsertEnter * set cursorline|set cursorcolumn
+	au InsertLeave * set nocursorline|set nocursorcolumn
 
-au InsertEnter * colo Tomorrow-Night-Bright
-au InsertLeave * colo Tomorrow-Night
+	au InsertEnter * colo Tomorrow-Night-Bright
+	au InsertLeave * colo Tomorrow-Night
+augroup END
 
 if ! has('gui_running')
 	set ttimeoutlen=10
@@ -26,11 +28,11 @@ endif
 
 " diff between current buffer and saved one
 function! s:DiffWithSaved()
-	let filetype=&ft
+	let l:filetype=&filetype
 	diffthis
 	vnew | r # | normal! 1Gdd
 	diffthis
-	exe "setlocal bt=nofile bh=wipe nobl noswf ro ft=" . filetype
+	exe 'setlocal bt=nofile bh=wipe nobl noswf ro ft=' . l:filetype
 endfunction
 com! DiffSaved call s:DiffWithSaved()
 com! DiffBuffer call s:DiffWithSaved()
@@ -59,3 +61,5 @@ endfunction
 
 call airline#parts#define_function('IMEStatus', 'IMEStatusString')
 let g:airline_section_x = airline#section#create(['IMEStatus'])
+
+hi! ALEWarning ctermbg=black

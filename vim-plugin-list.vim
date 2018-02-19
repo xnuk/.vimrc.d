@@ -140,7 +140,7 @@ Plug 'chaoren/vim-wordmotion'
 
 " Repeatedly pressing `v` extends visual block
 " This binds key.
-Plug 'gorkunov/smartpairs.vim'
+Plug 'xnuk/smartpairs.vim', {'branch': 'no-viv'}
 
 call plug#end()
 

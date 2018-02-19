@@ -18,7 +18,7 @@ nnoremap e j|vnoremap e j
 
 " word surffing
 nnoremap n b|vnoremap n b
-nnoremap i e|vnoremap i e
+nnoremap i w|vnoremap i w
 
 " home, end, half page up, half page down
 nnoremap tn ^|vnoremap tn ^
@@ -27,12 +27,10 @@ nnoremap tu <C-u>|vnoremap tu <C-u>
 nnoremap te <C-d>|vnoremap te <C-d>
 
 " select current word
+nnoremap w viw
 if has_key(g:plugs, 'vim-wordmotion')
-	nmap w vtw
-	nnoremap W viw
-	nnoremap tw viw
-else
-	nnoremap w viw
+	nmap W vtw
+	nmap tw vtw
 endif
 
 " paragragh surffing
@@ -73,6 +71,7 @@ vnoremap <S-Tab> <gv
 " enter key to split line
 nnoremap <CR> i<CR>
 
+nnoremap k J
 vnoremap k J
 
 " swap ; :
@@ -91,7 +90,7 @@ nnoremap l gt
 inoremap <C-Space> <C-x><C-o>
 
 " disable highlight temporary
-nnoremap <silent> <Leader><Leader> :noh<CR>
+nnoremap <silent> <Leader><Leader> :noh<CR>:ALEDetail<CR>
 
 " CtrlP
 nnoremap <silent> b :CtrlPBuffer<CR>
@@ -137,9 +136,11 @@ vnoremap { "ry:let @r=MakeSurround('{', '}', @r)<CR>gv"rpgv
 vnoremap } "ry:let @r=MakeSurround('{', '}', @r)<CR>gv"rpgv
 vnoremap " "ry:let @r=MakeSurround('"', '"', @r)<CR>gv"rpgv
 vnoremap ' "ry:let @r=MakeSurround("'", "'", @r)<CR>gv"rpgv
+vnoremap t<Space> "ry:let @r=MakeSurround(" ", " ", @r)<CR>gv"rpgv
 
 " find and replace next words
 nnoremap <silent> <Leader><Tab> /\<<C-r>"\><CR>.
+nnoremap <silent> <Leader>n /<C-r>"<CR>.
 
 " search
 nnoremap } n
@@ -175,54 +176,54 @@ vnoremap tv V
 " inoremap ( 9
 " inoremap ) 0
 " inoremap _ -
-" 
-" " map each number to its shift-key character
-" nnoremap 1 !
-" nnoremap 2 @
-" nnoremap 3 #
-" nnoremap 4 $
-" nnoremap 5 %
-" nnoremap 6 ^
-" nnoremap 7 &
-" nnoremap 8 *
-" nnoremap 9 (
-" nnoremap 0 )
-" nnoremap - _
-" " and then the opposite
-" nnoremap ! 1
-" nnoremap @ 2
-" nnoremap # 3
-" nnoremap $ 4
-" nnoremap % 5
-" nnoremap ^ 6
-" nnoremap & 7
-" nnoremap * 8
-" nnoremap ( 9
-" nnoremap ) 0
-" nnoremap _ -
-" 
-" " map each number to its shift-key character
-" vnoremap 1 !
-" vnoremap 2 @
-" vnoremap 3 #
-" vnoremap 4 $
-" vnoremap 5 %
-" vnoremap 6 ^
-" vnoremap 7 &
-" vnoremap 8 *
-" vnoremap 9 (
-" vnoremap 0 )
-" vnoremap - _
-" " and then the opposite
-" vnoremap ! 1
-" vnoremap @ 2
-" vnoremap # 3
-" vnoremap $ 4
-" vnoremap % 5
-" vnoremap ^ 6
-" vnoremap & 7
-" vnoremap * 8
-" vnoremap ( 9
-" vnoremap ) 0
-" vnoremap _ -
+
+" map each number to its shift-key character
+nnoremap 1 !
+nnoremap 2 @
+nnoremap 3 #
+nnoremap 4 $
+nnoremap 5 %
+nnoremap 6 ^
+nnoremap 7 &
+nnoremap 8 *
+nnoremap 9 (
+nnoremap 0 )
+nnoremap - _
+" and then the opposite
+nnoremap ! 1
+nnoremap @ 2
+nnoremap # 3
+nnoremap $ 4
+nnoremap % 5
+nnoremap ^ 6
+nnoremap & 7
+nnoremap * 8
+nnoremap ( 9
+nnoremap ) 0
+nnoremap _ -
+
+" map each number to its shift-key character
+vnoremap 1 !
+vnoremap 2 @
+vnoremap 3 #
+vnoremap 4 $
+vnoremap 5 %
+vnoremap 6 ^
+vnoremap 7 &
+vnoremap 8 *
+vnoremap 9 (
+vnoremap 0 )
+vnoremap - _
+" and then the opposite
+vnoremap ! 1
+vnoremap @ 2
+vnoremap # 3
+vnoremap $ 4
+vnoremap % 5
+vnoremap ^ 6
+vnoremap & 7
+vnoremap * 8
+vnoremap ( 9
+vnoremap ) 0
+vnoremap _ -
 
