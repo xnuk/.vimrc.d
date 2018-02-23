@@ -202,28 +202,28 @@ nnoremap ( 9
 nnoremap ) 0
 nnoremap _ -
 
-" map each number to its shift-key character
-vnoremap 1 !
-vnoremap 2 @
-vnoremap 3 #
-vnoremap 4 $
-vnoremap 5 %
-vnoremap 6 ^
-vnoremap 7 &
-vnoremap 8 *
-vnoremap 9 (
-vnoremap 0 )
-vnoremap - _
-" and then the opposite
-vnoremap ! 1
-vnoremap @ 2
-vnoremap # 3
-vnoremap $ 4
-vnoremap % 5
-vnoremap ^ 6
-vnoremap & 7
-vnoremap * 8
-vnoremap ( 9
-vnoremap ) 0
-vnoremap _ -
+" " map each number to its shift-key character
+" vnoremap 1 !
+" vnoremap 2 @
+" vnoremap 3 #
+" vnoremap 4 $
+" vnoremap 5 %
+" vnoremap 6 ^
+" vnoremap 7 &
+" vnoremap 8 *
+" vnoremap 9 (
+" vnoremap 0 )
+" vnoremap - _
+" " and then the opposite
+" vnoremap ! 1
+" vnoremap @ 2
+" vnoremap # 3
+" vnoremap $ 4
+" vnoremap % 5
+" vnoremap ^ 6
+" vnoremap & 7
+" vnoremap * 8
+" vnoremap ( 9
+" vnoremap ) 0
+" vnoremap _ -
 
