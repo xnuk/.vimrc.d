@@ -137,6 +137,7 @@ vnoremap } "ry:let @r=MakeSurround('{', '}', @r)<CR>gv"rpgv
 vnoremap " "ry:let @r=MakeSurround('"', '"', @r)<CR>gv"rpgv
 vnoremap ' "ry:let @r=MakeSurround("'", "'", @r)<CR>gv"rpgv
 vnoremap t<Space> "ry:let @r=MakeSurround(" ", " ", @r)<CR>gv"rpgv
+vnoremap <Space><Space> "ry:let @r=MakeSurround(" ", " ", @r)<CR>gv"rpgv
 
 " find and replace next words
 nnoremap <silent> <Leader><Tab> /\<<C-r>"\><CR>.

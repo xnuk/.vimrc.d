@@ -28,6 +28,7 @@ Plug 'dag/vim-fish', {'for': 'fish'}
 Plug 'leafgarland/typescript-vim', {'for': 'typescript'}
 Plug 'Kuniwak/vint', {'for': 'vim'}
 Plug 'gutenye/json5.vim', {'for': 'json5'}
+Plug 'rhysd/vim-crystal', {'for': 'crystal'}
 " This DOES key binds, for mustache.
 " [[ jumps to the first previous tag
 " ]] jumps to the first following tag
@@ -124,7 +125,7 @@ Plug 'honza/vim-snippets'
 " wat
 Plug 'pi314/ime.vim'
 Plug 'pi314/ime-emoji.vim'
-Plug '~/hangul-ime'
+Plug 'xnuk/hangul-ime'
 
 " transpose
 Plug 'salsifis/vim-transpose'
