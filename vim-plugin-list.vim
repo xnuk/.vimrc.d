@@ -47,6 +47,7 @@ Plug 'plasticboy/vim-markdown', {'for': 'markdown'}
 
 " EditorConfig
 Plug 'editorconfig/editorconfig-vim'
+" Plug 'xnuk/vim-editorconfig', {'branch': 'softtabstop'}
 
 " CtrlP
 Plug 'ctrlpvim/ctrlp.vim'
@@ -142,6 +143,9 @@ Plug 'chaoren/vim-wordmotion'
 " Repeatedly pressing `v` extends visual block
 " This binds key.
 Plug 'xnuk/smartpairs.vim', {'branch': 'no-viv'}
+
+" this plugin heavily binds key
+Plug 'jiangmiao/auto-pairs'
 
 call plug#end()
 

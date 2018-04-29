@@ -61,9 +61,7 @@ let g:SuperTabDefaultCompletionType = '<c-x><c-o>'
 let g:user_emmet_mode='ni' " use only normal and insert mode
 let g:user_emmet_install_global = 0
 augroup EmmetInstall
-	autocmd FileType html EmmetInstall
-	autocmd FileType pug EmmetInstall
-	autocmd FileType php EmmetInstall
+	autocmd FileType html,pug,php EmmetInstall
 augroup end
 
 " Startify
@@ -177,3 +175,12 @@ let g:wordmotion_mappings = {
 
 " smartpairs
 let g:smartpairs_revert_key = '<BS>'
+
+" auto-pairs
+let g:AutoPairsShortcutJump='<C-]>'
+let g:AutoPairsMapBS = 0
+let g:AutoPairsMapCh = 0
+let g:AutoPairsMapCR = 0
+let g:AutoPairsMapSpace = 0
+let g:AutoPairsFlyMode = 1
+let g:AutoPairsShortcutBackInsert = '<C-t>'

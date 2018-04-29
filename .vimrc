@@ -17,6 +17,11 @@ augroup InsertTheme
 	au InsertLeave * colo Tomorrow-Night
 augroup END
 
+augroup SignColumnPopupSucks
+	autocmd BufEnter * sign define dummy
+	autocmd BufEnter * execute 'sign place 9999 line=1 name=dummy buffer=' . bufnr('')
+augroup end
+
 if ! has('gui_running')
 	set ttimeoutlen=10
 	augroup FastEscape

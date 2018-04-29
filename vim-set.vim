@@ -25,6 +25,7 @@ set wildmenu
 set wildmode=list:longest,full
 
 set number " show line number
+set numberwidth=1
 
 set foldenable " enable fold
 set foldlevelstart=20 " but open all folds by default
