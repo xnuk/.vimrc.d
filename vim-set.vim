@@ -46,6 +46,9 @@ set listchars=tab:\|\ ,trail:·,extends:>,precedes:<,nbsp:+
 set splitbelow
 set splitright
 
+" macOS sucks
+set backspace=indent,eol,start
+
 " use sh shell for command execute
 if &shell =~# 'fish$'
 	set shell=sh
