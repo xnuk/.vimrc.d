@@ -154,3 +154,6 @@ let g:AutoPairsShortcutBackInsert = '<C-t>'
 
 " rainbow
 let g:rainbow_active = 1
+
+" Switch.vim
+let g:switch_mapping = '-'

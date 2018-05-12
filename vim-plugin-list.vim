@@ -186,6 +186,10 @@ Plug 'luochen1990/rainbow' " rainbow brackets
 
 " Plug 'ajh17/VimCompletesMe'
 
+" cycle constants
+" this binds key, gs.
+Plug 'AndrewRadev/switch.vim'
+
 call plug#end()
 
 " %
