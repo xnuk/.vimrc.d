@@ -1,3 +1,4 @@
+set encoding=utf-8
 source ~/.vimrc.d/vim-set.vim
 source ~/.vimrc.d/vim-plugin-conf.vim
 source ~/.vimrc.d/vim-plugin-list.vim
@@ -7,14 +8,16 @@ au BufNewFile,BufRead *.jison set filetype=javascript
 au BufNewFile,BufRead .babelrc set filetype=json
 
 syntax on
-colo Tomorrow-Night
+colo base16-tomorrow-night
 
+set cursorcolumn
+set relativenumber
 augroup InsertTheme
-	au InsertEnter * set cursorline|set cursorcolumn
-	au InsertLeave * set nocursorline|set nocursorcolumn
+	au InsertEnter * set cursorline|set nocursorcolumn
+	au InsertLeave * set nocursorline|set cursorcolumn
 
-	au InsertEnter * colo Tomorrow-Night-Bright
-	au InsertLeave * colo Tomorrow-Night
+	au InsertEnter * hi Normal guibg=#000000
+	au InsertLeave * exec 'hi Normal guibg=#' . g:base16_gui00
 augroup END
 
 augroup SignColumnPopupSucks
@@ -30,6 +33,11 @@ if ! has('gui_running')
 		au InsertLeave * set timeoutlen=1000
 	augroup END
 endif
+
+" augroup numbertoggle
+" 	autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+" 	autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+" augroup END
 
 " diff between current buffer and saved one
 function! s:DiffWithSaved()

@@ -1,10 +1,25 @@
+scriptencoding utf8
 call plug#begin()
 
-Plug 'chriskempson/tomorrow-theme', {'rtp': 'vim'}
+" Plug 'chriskempson/tomorrow-theme', {'rtp': 'vim'}
+Plug 'chriskempson/base16-vim'
 
-" airline
-Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline' " {{{
 Plug 'vim-airline/vim-airline-themes'
+
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#branch#enabled = 1
+let g:airline_theme='base16color'
+
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_symbols = {}
+let g:airline_symbols.branch = ''
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.linenr = ''
+" }}}
 
 " text object
 Plug 'kana/vim-textobj-user' " custom text object
@@ -23,12 +38,12 @@ Plug 'digitaltoad/vim-pug', {'for': 'pug'}
 Plug 'wavded/vim-stylus', {'for': 'stylus'}
 Plug 'vim-scripts/haskell.vim', {'for': 'haskell'}
 Plug 'rust-lang/rust.vim', {'for': 'rust'}
-Plug 'racer-rust/vim-racer', {'for': 'rust'}
 Plug 'dag/vim-fish', {'for': 'fish'}
 Plug 'leafgarland/typescript-vim', {'for': 'typescript'}
 Plug 'Kuniwak/vint', {'for': 'vim'}
 Plug 'gutenye/json5.vim', {'for': 'json5'}
 Plug 'rhysd/vim-crystal', {'for': 'crystal'}
+
 " This DOES key binds, for mustache.
 " [[ jumps to the first previous tag
 " ]] jumps to the first following tag
@@ -45,8 +60,12 @@ Plug 'mustache/vim-mustache-handlebars'
 " ]u go to parent header
 Plug 'plasticboy/vim-markdown', {'for': 'markdown'}
 
-" EditorConfig
+Plug 'racer-rust/vim-racer', {'for': 'rust'}
+let g:racer_experimental_completer = 1
+
 Plug 'editorconfig/editorconfig-vim'
+let g:EditorConfig_exclude_patterns = ['fugitive://.*']
+
 " Plug 'xnuk/vim-editorconfig', {'branch': 'softtabstop'}
 
 " CtrlP
@@ -68,7 +87,10 @@ Plug 'AndrewRadev/linediff.vim' " Select lines, and execute :Linediff
 
 " Haskell
 Plug 'eagletmt/ghcmod-vim', {'for': 'haskell'}
+
 Plug 'eagletmt/neco-ghc', {'for': 'haskell'}
+let g:necoghc_enable_detailed_browse = 1
+
 Plug 'Twinside/vim-hoogle', {'for': 'haskell'} " :Hoogle*
 
 " Python
@@ -76,7 +98,7 @@ Plug 'Twinside/vim-hoogle', {'for': 'haskell'} " :Hoogle*
 " Plug 'davidhalter/jedi-vim', {'for': 'python'}
 
 Plug 'Valloric/YouCompleteMe'
-Plug 'ervandew/supertab' " tab complete
+Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
 
 " This DOES key binds. `<c-y>,` only.
 Plug 'mattn/emmet-vim'
@@ -109,8 +131,17 @@ Plug 'Quramy/tsuquyomi'
 " LICENSE templates
 Plug 'antoyo/vim-licenses'
 
-" ale linter
-Plug 'w0rp/ale'
+Plug 'w0rp/ale' " linter {{{
+
+let g:ale_linters = {
+	\ 'haskell': ['stack-ghc-mod', 'stack-build', 'hlint'],
+	\ }
+
+let g:ale_fixers = {
+	\ 'haskell': ['hfmt', 'remove_trailing_lines', 'trim_whitespace'],
+	\ 'ruby': ['rubocop', 'remove_trailing_lines', 'trim_whitespace']
+	\ }
+" }}}
 
 " JSON
 Plug 'elzr/vim-json', {'for': 'json'}
@@ -144,8 +175,16 @@ Plug 'chaoren/vim-wordmotion'
 " This binds key.
 Plug 'xnuk/smartpairs.vim', {'branch': 'no-viv'}
 
-" this plugin heavily binds key
-Plug 'jiangmiao/auto-pairs'
+Plug 'luochen1990/rainbow' " rainbow brackets
+
+" auto suggestion by tab
+" This binds key, TAB.
+" and this is intentionally put here, to work properly.
+" For instance, There's an IME above which eats up TAB keys.
+" Plug 'ervandew/supertab'
+" let g:SuperTabDefaultCompletionType = '<c-x><c-o>'
+
+" Plug 'ajh17/VimCompletesMe'
 
 call plug#end()
 

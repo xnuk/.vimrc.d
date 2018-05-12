@@ -6,6 +6,11 @@ set winaltkeys=no " allow mapping of alt key
 set t_Co=256
 set t_ut=
 set background=dark
+if $TERM =~? '\v^(st-|xterm-256color)'
+	set termguicolors
+elseif $TERM =~? '-256color$'
+	let g:base16colorspace = '256'
+endif
 set lazyredraw " don't redraw while executing macros/mappings
 
 set nostartofline " keep cursor in the same column (especially indenting stuff)
@@ -55,6 +60,6 @@ if &shell =~# 'fish$'
 endif
 
 " mouse mode in tmux
-if !empty($TMUX)
+if !empty($TMUX) || $TERM =~? '^st-'
 	set ttymouse=xterm2
 endif

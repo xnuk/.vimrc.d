@@ -43,13 +43,11 @@ nnoremap H I
 xnoremap <silent> <expr> h (mode() =~# "[V]" ? "\<C-v>0o$I" : "I")
 xnoremap <silent> <expr> H (mode() =~# "[V]" ? "\<C-v>0o$I" : "I")
 
-" kill, with no mercy.
+" kill with no mercy
 nnoremap <C-c> :q!<Enter>
 " paste
 inoremap <C-v> <C-[>pa
 " undo
-inoremap <C-z> <C-[>ui
-nnoremap zz u
 nnoremap <BS> u
 " redo
 nnoremap t<BS> <C-r>
@@ -90,7 +88,7 @@ nnoremap l gt
 inoremap <C-Space> <C-x><C-o>
 
 " disable highlight temporary
-nnoremap <silent> <Leader><Leader> :noh<CR>:ALEDetail<CR>
+nnoremap <silent> <Leader><Leader> :noh<CR>:RainbowToggleOn<CR>:ALEDetail<CR>
 
 " CtrlP
 nnoremap <silent> b :CtrlPBuffer<CR>
@@ -122,8 +120,6 @@ function MakeSurround(lc, rc, s)
 	let l:lcq = len(a:lc)
 	let l:rcq = len(a:rc)
 	if a:s[0:(l:lcq - 1)] ==# a:lc && a:s[-(l:rcq):] ==# a:rc
-		"                     ' \V \^  \(' . a:c . ' \) \? \| \(' . a:c . ' \) \? \$'
-		"return substitute(a:s, '\\V\\^\\(' . a:c . '\\)\\?\\|\\(' . a:c . '\\)\\?\\$', a:c, 'g')
 		return a:s[(l:lcq):-(l:rcq + 1)]
 	else
 		return (a:lc . a:s . a:rc)
@@ -151,33 +147,7 @@ nnoremap { N
 nnoremap tv V
 vnoremap tv V
 
-" " swap number keys
-" 
-" " map each number to its shift-key character
-" inoremap 1 !
-" inoremap 2 @
-" inoremap 3 #
-" inoremap 4 $
-" inoremap 5 %
-" inoremap 6 ^
-" inoremap 7 &
-" inoremap 8 *
-" inoremap 9 (
-" inoremap 0 )
-" inoremap - _
-" " and then the opposite
-" inoremap ! 1
-" inoremap @ 2
-" inoremap # 3
-" inoremap $ 4
-" inoremap % 5
-" inoremap ^ 6
-" inoremap & 7
-" inoremap * 8
-" inoremap ( 9
-" inoremap ) 0
-" inoremap _ -
-
+" swap number keys
 " map each number to its shift-key character
 nnoremap 1 !
 nnoremap 2 @
@@ -202,29 +172,3 @@ nnoremap * 8
 nnoremap ( 9
 nnoremap ) 0
 nnoremap _ -
-
-" " map each number to its shift-key character
-" vnoremap 1 !
-" vnoremap 2 @
-" vnoremap 3 #
-" vnoremap 4 $
-" vnoremap 5 %
-" vnoremap 6 ^
-" vnoremap 7 &
-" vnoremap 8 *
-" vnoremap 9 (
-" vnoremap 0 )
-" vnoremap - _
-" " and then the opposite
-" vnoremap ! 1
-" vnoremap @ 2
-" vnoremap # 3
-" vnoremap $ 4
-" vnoremap % 5
-" vnoremap ^ 6
-" vnoremap & 7
-" vnoremap * 8
-" vnoremap ( 9
-" vnoremap ) 0
-" vnoremap _ -
-

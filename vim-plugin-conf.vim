@@ -11,24 +11,6 @@ let g:ycm_semantic_triggers = {
 let g:ycm_collect_identifiers_from_comments_and_strings = 1
 let g:ycm_rust_src_path = '/usr/lib/rustlib/src/rust/src'
 
-let g:deoplete#enable_at_startup = 1
-
-" ale
-let g:ale_linters = {
-	\ 'haskell': ['stack-ghc-mod', 'stack-build', 'hlint'],
-	\ }
-
-let g:ale_fixers = {
-	\ 'haskell': ['hfmt', 'remove_trailing_lines', 'trim_whitespace'],
-	\ 'ruby': ['rubocop', 'remove_trailing_lines', 'trim_whitespace']
-	\ }
-
-" Racer
-let g:racer_experimental_completer = 1
-
-" neco-ghc
-let g:necoghc_enable_detailed_browse = 1
-
 " EditorConfig
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 
@@ -36,26 +18,11 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 let g:vim_markdown_folding_disabled = 1
 
 " airline {{{
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#branch#enabled = 1
-let g:airline_theme='base16color'
-
-let g:airline_left_sep = ''
-let g:airline_left_alt_sep = ''
-let g:airline_right_sep = ''
-let g:airline_right_alt_sep = ''
-let g:airline_symbols = {}
-let g:airline_symbols.branch = ''
-let g:airline_symbols.readonly = ''
-let g:airline_symbols.linenr = ''
 
 " }}}
 
 " vim-mustache-handlebars
 let g:mustache_operators = 0
-
-" supertab
-let g:SuperTabDefaultCompletionType = '<c-x><c-o>'
 
 " Emmet
 let g:user_emmet_mode='ni' " use only normal and insert mode
@@ -184,3 +151,6 @@ let g:AutoPairsMapCR = 0
 let g:AutoPairsMapSpace = 0
 let g:AutoPairsFlyMode = 1
 let g:AutoPairsShortcutBackInsert = '<C-t>'
+
+" rainbow
+let g:rainbow_active = 1
