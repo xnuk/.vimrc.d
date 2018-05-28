@@ -8,17 +8,7 @@ au BufNewFile,BufRead *.jison set filetype=javascript
 au BufNewFile,BufRead .babelrc set filetype=json
 
 syntax on
-colo base16-tomorrow-night
 
-set cursorcolumn
-set relativenumber
-augroup InsertTheme
-	au InsertEnter * set cursorline|set nocursorcolumn
-	au InsertLeave * set nocursorline|set cursorcolumn
-
-	au InsertEnter * hi Normal guibg=#000000
-	au InsertLeave * exec 'hi Normal guibg=#' . g:base16_gui00
-augroup END
 
 augroup SignColumnPopupSucks
 	autocmd BufEnter * sign define dummy

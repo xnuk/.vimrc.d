@@ -1,25 +1,9 @@
 scriptencoding utf8
-" YouCompleteMe
-let g:ycm_semantic_triggers = {
-	\ 'haskell': ['.', ' '],
-	\ 'javascript,python' : ['.'],
-	\ 'vim'  : ['re![_a-zA-Z]+[_\w]*\.'],
-	\ 'c'    : ['->', '.'],
-	\ 'cpp'  : ['->', '.', '::'],
-	\ 'rust' : [' ',  '.', '::', '{']
-	\ }
-let g:ycm_collect_identifiers_from_comments_and_strings = 1
-let g:ycm_rust_src_path = '/usr/lib/rustlib/src/rust/src'
-
 " EditorConfig
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 
 " vim-markdown
 let g:vim_markdown_folding_disabled = 1
-
-" airline {{{
-
-" }}}
 
 " vim-mustache-handlebars
 let g:mustache_operators = 0
@@ -31,51 +15,11 @@ augroup EmmetInstall
 	autocmd FileType html,pug,php EmmetInstall
 augroup end
 
-" Startify
-au User Startified
-	\ execute 'silent! nunmap <buffer> n' |
-	\ execute 'silent! nunmap <buffer> i' |
-	\ execute 'silent! nunmap <buffer> e' |
-	\ execute 'silent! nunmap <buffer> u'
-
-let g:startify_custom_indices = ['a', 'r', 's', 't', 'd', 'h', 'n', 'e', 'i', 'o']
-let g:startify_session_sort = 1
-let g:startify_change_to_vcs_root = 1
-let g:startify_enable_unsafe = 1
-let g:startify_fortune_use_unicode = 1
-let g:startify_files_number = 5
-
-let g:startify_commands = [
-	\ {'f': 'FZF'},
-	\ {'p': ['vim-plug', 'PlugUpdate']},
-	\ ]
-
-let g:startify_bookmarks = [
-	\ {'c': '~/.vimrc.d/vim-plugin-conf.vim'},
-	\ {'l': '~/.vimrc.d/vim-plugin-list.vim'},
-	\ ]
-
 " vim-gitgutter
 let g:gitgutter_map_keys = 0
 
 " elm-vim
 let g:elm_setup_keybindings = 0
-
-" VimExplorer
-let g:VEConf_usingVim = 1
-let g:VEConf_vimOpenCommand = 'tabfind'
-let g:VEConf_singleFileActions = {}
-let g:VEConf_singleFileHotKeys = {}
-
-" vim-multiple-cursors
-let g:multi_cursor_use_default_mapping=0
-let g:multi_cursor_next_key='<C-d>'
-let g:multi_cursor_prev_key='<C-p>'
-let g:multi_cursor_skip_key='<C-k>'
-let g:multi_cursor_quit_key='<Esc>'
-
-"ctrlp
-let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
 " incsearch
 "map /  <Plug>(incsearch-forward)
@@ -93,20 +37,20 @@ let g:is#do_default_mappings = 0
 
 " fzf
 if executable('rg')
-  command! -bang -nargs=* Rg
-        \ call fzf#vim#grep('rg ' .
-        \   '--color=always ' .
-        \   '--glob "!.git/*" ' .
-        \   '--ignore-case ' .
-        \   '--line-number ' .
-        \   '--column ' .
-        \   '--no-heading ' .
-        \   '--hidden ' .
-        \   '--ignore-file=~/.gitignore_global ' .
-        \   '--follow ' .
-        \   <q-args>, 1,
-        \   fzf#vim#with_preview('right:50%'),
-        \   <bang>0)
+	command! -bang -nargs=* Rg
+		\ call fzf#vim#grep('rg ' .
+		\   '--color=always ' .
+		\   '--glob "!.git/*" ' .
+		\   '--ignore-case ' .
+		\   '--line-number ' .
+		\   '--column ' .
+		\   '--no-heading ' .
+		\   '--hidden ' .
+		\   '--ignore-file=~/.gitignore_global ' .
+		\   '--follow ' .
+		\   <q-args>, 1,
+		\   fzf#vim#with_preview('right:50%'),
+		\   <bang>0)
 endif
 
 " tex

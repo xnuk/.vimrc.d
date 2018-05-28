@@ -130,7 +130,7 @@ vnoremap ( "ry:let @r=MakeSurround('(', ')', @r)<CR>gv"rpgv
 vnoremap ) "ry:let @r=MakeSurround('(', ')', @r)<CR>gv"rpgv
 vnoremap { "ry:let @r=MakeSurround('{', '}', @r)<CR>gv"rpgv
 vnoremap } "ry:let @r=MakeSurround('{', '}', @r)<CR>gv"rpgv
-vnoremap " "ry:let @r=MakeSurround('"', '"', @r)<CR>gv"rpgv
+vnoremap '' "ry:let @r=MakeSurround('"', '"', @r)<CR>gv"rpgv
 vnoremap ' "ry:let @r=MakeSurround("'", "'", @r)<CR>gv"rpgv
 vnoremap t<Space> "ry:let @r=MakeSurround(" ", " ", @r)<CR>gv"rpgv
 vnoremap <Space><Space> "ry:let @r=MakeSurround(" ", " ", @r)<CR>gv"rpgv
@@ -147,28 +147,28 @@ nnoremap { N
 nnoremap tv V
 vnoremap tv V
 
-" swap number keys
-" map each number to its shift-key character
-nnoremap 1 !
-nnoremap 2 @
-nnoremap 3 #
-nnoremap 4 $
-nnoremap 5 %
-nnoremap 6 ^
-nnoremap 7 &
-nnoremap 8 *
-nnoremap 9 (
-nnoremap 0 )
-nnoremap - _
-" and then the opposite
-nnoremap ! 1
-nnoremap @ 2
-nnoremap # 3
-nnoremap $ 4
-nnoremap % 5
-nnoremap ^ 6
-nnoremap & 7
-nnoremap * 8
-nnoremap ( 9
-nnoremap ) 0
-nnoremap _ -
+" " swap number keys
+" " map each number to its shift-key character
+" nnoremap 1 !
+" nnoremap 2 @
+" nnoremap 3 #
+" nnoremap 4 $
+" nnoremap 5 %
+" nnoremap 6 ^
+" nnoremap 7 &
+" nnoremap 8 *
+" nnoremap 9 (
+" nnoremap 0 )
+" nnoremap - _
+" " and then the opposite
+" nnoremap ! 1
+" nnoremap @ 2
+" nnoremap # 3
+" nnoremap $ 4
+" nnoremap % 5
+" nnoremap ^ 6
+" nnoremap & 7
+" nnoremap * 8
+" nnoremap ( 9
+" nnoremap ) 0
+" nnoremap _ -

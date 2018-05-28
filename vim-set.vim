@@ -3,14 +3,6 @@ set nocompatible " no vi-compatible
 set mouse=vin " mouse mode
 set winaltkeys=no " allow mapping of alt key
 
-set t_Co=256
-set t_ut=
-set background=dark
-if $TERM =~? '\v^(st-|xterm-256color)'
-	set termguicolors
-elseif $TERM =~? '-256color$'
-	let g:base16colorspace = '256'
-endif
 set lazyredraw " don't redraw while executing macros/mappings
 
 set nostartofline " keep cursor in the same column (especially indenting stuff)
@@ -18,7 +10,7 @@ set virtualedit=block " cursor can be positioned where there is no actual charac
 
 set whichwrap=b,s,[,],<,>
 
-set scrolloff=2 " minimal number of lines to keep above and below the cursor
+set scrolloff=999 " minimal number of lines to keep above and below the cursor
 
 set incsearch " while typing a search command, show where the pattern
 set hlsearch " highlight search
