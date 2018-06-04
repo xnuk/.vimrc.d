@@ -89,7 +89,7 @@ Plug 'osyo-manga/vim-anzu'
 Plug 'AndrewRadev/linediff.vim' " Select lines, and execute :Linediff
 
 " Haskell
-Plug 'eagletmt/ghcmod-vim', {'for': 'haskell'}
+" Plug 'eagletmt/ghcmod-vim', {'for': 'haskell'}
 
 Plug 'eagletmt/neco-ghc', {'for': 'haskell'}
 let g:necoghc_enable_detailed_browse = 1
@@ -173,11 +173,11 @@ Plug 'antoyo/vim-licenses'
 Plug 'w0rp/ale' " linter {{{
 
 let g:ale_linters = {
-	\ 'haskell': ['stack-ghc-mod', 'stack-build', 'hlint'],
+	\ 'haskell': ['stack-build', 'hlint'],
 	\ }
 
 let g:ale_fixers = {
-	\ 'haskell': ['hfmt', 'remove_trailing_lines', 'trim_whitespace'],
+	\ 'haskell': ['remove_trailing_lines', 'trim_whitespace'],
 	\ 'ruby': ['rubocop', 'remove_trailing_lines', 'trim_whitespace'],
 	\ 'rust': ['rustfmt', 'remove_trailing_lines', 'trim_whitespace']
 	\ }
